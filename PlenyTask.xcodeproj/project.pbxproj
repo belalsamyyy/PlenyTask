@@ -21,6 +21,8 @@
 		41EDF78F2AB39F9E00399425 /* NavCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF78E2AB39F9E00399425 /* NavCoordinator.swift */; };
 		41EDF7912AB3A05E00399425 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7902AB3A05E00399425 /* SplashView.swift */; };
 		41EDF7932AB3AF6800399425 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7922AB3AF6800399425 /* Constants.swift */; };
+		41EDF7952AB3B8A500399425 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7942AB3B8A500399425 /* User.swift */; };
+		41EDF7972AB3B8BF00399425 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7962AB3B8BF00399425 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		41EDF78E2AB39F9E00399425 /* NavCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavCoordinator.swift; sourceTree = "<group>"; };
 		41EDF7902AB3A05E00399425 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		41EDF7922AB3AF6800399425 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		41EDF7942AB3B8A500399425 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		41EDF7962AB3B8BF00399425 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,8 @@
 		41EDF7812AB38E8D00399425 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				41EDF7942AB3B8A500399425 /* User.swift */,
+				41EDF7962AB3B8BF00399425 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,9 +366,11 @@
 				41EDF78F2AB39F9E00399425 /* NavCoordinator.swift in Sources */,
 				41EDF78D2AB3943900399425 /* AppCoordinator.swift in Sources */,
 				41EDF7512AB37D3700399425 /* PlenyTaskApp.swift in Sources */,
+				41EDF7952AB3B8A500399425 /* User.swift in Sources */,
 				41EDF78B2AB3900400399425 /* SceneDelegate.swift in Sources */,
 				41EDF7912AB3A05E00399425 /* SplashView.swift in Sources */,
 				41EDF7932AB3AF6800399425 /* Constants.swift in Sources */,
+				41EDF7972AB3B8BF00399425 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
