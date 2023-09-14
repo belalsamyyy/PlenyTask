@@ -51,6 +51,8 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
     //MARK: - setup App flow
     
     func setupAppFlow() {
+        appDelegate?.appCoordinator = AppCoordinator(navigationController: self.navigationViewController)
+        
         // Manage app flow with conditions later, like token existence, or anything else ...
         // ====================================================================================
         //appDelegate?.appCoordinator.appState.send(.first) // first time open the app

@@ -24,10 +24,11 @@ class AppCoordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         
-        appState.sink { appState in
+        appState.sink { [weak self] appState  in
             switch appState {
             case .first:
                 print("appState => first")
+                self?.loadContentScreen()
                 
             case .anonymous:
                 print("appState => anonymous")
@@ -40,9 +41,44 @@ class AppCoordinator {
     }
     
     
+    //MARK: - Present View Controller
+    
+    func present<V: View>(_ view: V, style: UIModalPresentationStyle = .fullScreen, title: String = "", isRoot: Bool = false, isNavigationBarHidden: Bool = false, animate: Bool = true) {
+        let viewController = PlenyHostingController(rootView: view)
+        viewController.isNavigationBarHidden = isNavigationBarHidden
+        viewController.modalPresentationStyle = style
+        
+        if navigationController.presentedViewController != nil {
+            if let nav = navigationController.presentedViewController as? UINavigationController {
+                nav.pushViewController(viewController, animated: animate)
+            }
+            return
+        }
+        
+        if navigationController.viewControllers.isEmpty {
+            navigationController.viewControllers = [viewController]
+            return
+        }
+        
+        if isRoot {
+            navigationController.setViewControllers([viewController], animated: animate)
+        } else {
+            navigationController.present(viewController, animated: false, completion: nil)
+        }
+    }
+    
+    //MARK: - Dismiss View Controller
+
+    func dismiss() {
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationController.dismiss(animated: true)
+        }
+    }
+    
+    
     //MARK: - Push View Controller
     
-    func push<V: View>(_ view: V, title: String, isRoot: Bool = false, isNavigationBarHidden: Bool = false, animate: Bool = true) {
+    func push<V: View>(_ view: V, title: String = "", isRoot: Bool = false, isNavigationBarHidden: Bool = false, animate: Bool = true) {
         let viewController = PlenyHostingController(rootView: view)
         viewController.isNavigationBarHidden = isNavigationBarHidden
         
@@ -70,10 +106,10 @@ class AppCoordinator {
 
     func pop() {
         DispatchQueue.main.async { [weak self] in
-            print("back btn tapped ...")
             self?.navigationController.popViewController(animated: true)
         }
     }
+    
 }
 
 
@@ -91,3 +127,4 @@ class PlenyHostingController<Content: View>: UIHostingController<Content> {
         self.navigationController?.navigationBar.isHidden = isNavigationBarHidden
     }
 }
+

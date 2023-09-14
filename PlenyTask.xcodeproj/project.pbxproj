@@ -18,6 +18,8 @@
 		41EDF7892AB38FF300399425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7882AB38FF300399425 /* AppDelegate.swift */; };
 		41EDF78B2AB3900400399425 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF78A2AB3900400399425 /* SceneDelegate.swift */; };
 		41EDF78D2AB3943900399425 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF78C2AB3943800399425 /* AppCoordinator.swift */; };
+		41EDF78F2AB39F9E00399425 /* NavCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF78E2AB39F9E00399425 /* NavCoordinator.swift */; };
+		41EDF7912AB3A05E00399425 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7902AB3A05E00399425 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		41EDF7882AB38FF300399425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41EDF78A2AB3900400399425 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		41EDF78C2AB3943800399425 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		41EDF78E2AB39F9E00399425 /* NavCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavCoordinator.swift; sourceTree = "<group>"; };
+		41EDF7902AB3A05E00399425 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				41EDF7522AB37D3700399425 /* ContentView.swift */,
+				41EDF7902AB3A05E00399425 /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				41EDF78C2AB3943800399425 /* AppCoordinator.swift */,
+				41EDF78E2AB39F9E00399425 /* NavCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -348,9 +354,11 @@
 			files = (
 				41EDF7892AB38FF300399425 /* AppDelegate.swift in Sources */,
 				41EDF7532AB37D3700399425 /* ContentView.swift in Sources */,
+				41EDF78F2AB39F9E00399425 /* NavCoordinator.swift in Sources */,
 				41EDF78D2AB3943900399425 /* AppCoordinator.swift in Sources */,
 				41EDF7512AB37D3700399425 /* PlenyTaskApp.swift in Sources */,
 				41EDF78B2AB3900400399425 /* SceneDelegate.swift in Sources */,
+				41EDF7912AB3A05E00399425 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
