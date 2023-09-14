@@ -96,10 +96,18 @@
 		41EDF74F2AB37D3700399425 /* PlenyTask */ = {
 			isa = PBXGroup;
 			children = (
-				41EDF7502AB37D3700399425 /* PlenyTaskApp.swift */,
-				41EDF7522AB37D3700399425 /* ContentView.swift */,
+				41EDF7862AB38EC700399425 /* CustomViews */,
+				41EDF7852AB38EB600399425 /* Extension */,
+				41EDF7842AB38EAC00399425 /* Utility */,
+				41EDF7832AB38EA300399425 /* Coordinator */,
+				41EDF7822AB38E9A00399425 /* Requests */,
+				41EDF77F2AB38E6A00399425 /* View */,
+				41EDF7802AB38E8300399425 /* ViewModel */,
+				41EDF7812AB38E8D00399425 /* Model */,
+				41EDF7872AB38EE400399425 /* Resources */,
 				41EDF7542AB37D3A00399425 /* Assets.xcassets */,
 				41EDF7562AB37D3A00399425 /* Preview Content */,
+				41EDF7502AB37D3700399425 /* PlenyTaskApp.swift */,
 			);
 			path = PlenyTask;
 			sourceTree = "<group>";
@@ -127,6 +135,70 @@
 				41EDF76D2AB37D3A00399425 /* PlenyTaskUITestsLaunchTests.swift */,
 			);
 			path = PlenyTaskUITests;
+			sourceTree = "<group>";
+		};
+		41EDF77F2AB38E6A00399425 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41EDF7522AB37D3700399425 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		41EDF7802AB38E8300399425 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		41EDF7812AB38E8D00399425 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		41EDF7822AB38E9A00399425 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		41EDF7832AB38EA300399425 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		41EDF7842AB38EAC00399425 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		41EDF7852AB38EB600399425 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		41EDF7862AB38EC700399425 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		41EDF7872AB38EE400399425 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
