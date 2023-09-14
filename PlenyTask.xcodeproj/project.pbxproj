@@ -23,6 +23,8 @@
 		41EDF7932AB3AF6800399425 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7922AB3AF6800399425 /* Constants.swift */; };
 		41EDF7952AB3B8A500399425 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7942AB3B8A500399425 /* User.swift */; };
 		41EDF7972AB3B8BF00399425 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7962AB3B8BF00399425 /* Post.swift */; };
+		41EDF7992AB3B9F200399425 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7982AB3B9F200399425 /* NetworkRequest.swift */; };
+		41EDF79B2AB3BAB600399425 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF79A2AB3BAB600399425 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		41EDF7922AB3AF6800399425 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		41EDF7942AB3B8A500399425 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		41EDF7962AB3B8BF00399425 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		41EDF7982AB3B9F200399425 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		41EDF79A2AB3BAB600399425 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 		41EDF7822AB38E9A00399425 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				41EDF7982AB3B9F200399425 /* NetworkRequest.swift */,
+				41EDF79A2AB3BAB600399425 /* NetworkError.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -369,6 +375,8 @@
 				41EDF7952AB3B8A500399425 /* User.swift in Sources */,
 				41EDF78B2AB3900400399425 /* SceneDelegate.swift in Sources */,
 				41EDF7912AB3A05E00399425 /* SplashView.swift in Sources */,
+				41EDF7992AB3B9F200399425 /* NetworkRequest.swift in Sources */,
+				41EDF79B2AB3BAB600399425 /* NetworkError.swift in Sources */,
 				41EDF7932AB3AF6800399425 /* Constants.swift in Sources */,
 				41EDF7972AB3B8BF00399425 /* Post.swift in Sources */,
 			);

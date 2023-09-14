@@ -13,14 +13,14 @@ let BASE_URL = "https://dummyjson.com"
 
 enum API {
     case PostLogin // Login user and get token
-    case GetAllPosts // Get all posts
+    case GetPosts // Get all posts
     case GetPost(id: Int) // Get a single post with ID
     case GetPostsSearch(query: String) // Search posts
     
     var url: String {
         switch self {
         case .PostLogin: return "/auth/login"
-        case .GetAllPosts: return "/posts"
+        case .GetPosts: return "/posts"
         case .GetPost(let id): return "/posts/\(id)"
         case .GetPostsSearch(let query): return "/posts/search?q=\(query)"
         }
