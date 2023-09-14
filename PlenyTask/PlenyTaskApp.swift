@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-@main
+//@main
 struct PlenyTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
         }
     }
 }

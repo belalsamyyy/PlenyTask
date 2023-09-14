@@ -17,6 +17,7 @@
 		41EDF77D2AB38D4000399425 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 41EDF77C2AB38D4000399425 /* Alamofire */; };
 		41EDF7892AB38FF300399425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7882AB38FF300399425 /* AppDelegate.swift */; };
 		41EDF78B2AB3900400399425 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF78A2AB3900400399425 /* SceneDelegate.swift */; };
+		41EDF78D2AB3943900399425 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF78C2AB3943800399425 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		41EDF76D2AB37D3A00399425 /* PlenyTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlenyTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		41EDF7882AB38FF300399425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41EDF78A2AB3900400399425 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		41EDF78C2AB3943800399425 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +113,9 @@
 				41EDF7872AB38EE400399425 /* Resources */,
 				41EDF7542AB37D3A00399425 /* Assets.xcassets */,
 				41EDF7562AB37D3A00399425 /* Preview Content */,
-				41EDF7502AB37D3700399425 /* PlenyTaskApp.swift */,
 				41EDF7882AB38FF300399425 /* AppDelegate.swift */,
 				41EDF78A2AB3900400399425 /* SceneDelegate.swift */,
+				41EDF7502AB37D3700399425 /* PlenyTaskApp.swift */,
 			);
 			path = PlenyTask;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 		41EDF7832AB38EA300399425 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				41EDF78C2AB3943800399425 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			files = (
 				41EDF7892AB38FF300399425 /* AppDelegate.swift in Sources */,
 				41EDF7532AB37D3700399425 /* ContentView.swift in Sources */,
+				41EDF78D2AB3943900399425 /* AppCoordinator.swift in Sources */,
 				41EDF7512AB37D3700399425 /* PlenyTaskApp.swift in Sources */,
 				41EDF78B2AB3900400399425 /* SceneDelegate.swift in Sources */,
 			);

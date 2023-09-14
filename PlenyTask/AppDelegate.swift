@@ -11,7 +11,11 @@ import UIKit
 
 @main
 class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject  {
+    var appCoordinator: AppCoordinator!
+   
     
+    // MARK: - didFinishLaunchingWithOptions
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("App Did Launch!")
         return true
