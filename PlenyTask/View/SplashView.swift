@@ -14,10 +14,19 @@ struct SplashView: View {
             Color("primaryColor")
                 .edgesIgnoringSafeArea(.all)
             
-            Image("logo-pleny")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 300, height: 300, alignment: .center)
+            VStack(alignment: .center, spacing: 0) {
+                
+                Image("logo-pleny")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 300, alignment: .center)
+                
+                Text("#TheNextBigSocialNetwork")
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundColor(.white)
+                    .padding(.bottom, 15)
+            }
+            
         }
     }
 }
