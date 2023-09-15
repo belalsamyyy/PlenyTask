@@ -35,7 +35,7 @@ extension AppCoordinator {
     //MARK: - Home
     
     func loadMainView(selected: TabBarItem, isItBackAction: Bool = false) {
-        let vm = MainViewVM(placeHolderVM: PlaceHolderVM(), selected: selected)
+        let vm = MainViewVM(homeVM: HomeVM(), placeHolderVM: PlaceHolderVM(), selected: selected)
         
         if !isItBackAction {
             present(MainView(vm: vm))

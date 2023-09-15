@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 import Combine
 
-class MainViewVM: ObservableObject{
+class MainViewVM: ObservableObject {
+    @Published var homeVM: HomeVM
     @Published var placeHolderVM: PlaceHolderVM
     
     var tabItems = TabBarItem.allCases
@@ -19,12 +20,13 @@ class MainViewVM: ObservableObject{
     var subscriptions: [AnyCancellable] = []
     
     //MARK: Init
-    init(dataManager: NetworkRequestProtocol = NetworkRequest.shared, placeHolderVM: PlaceHolderVM, selected: TabBarItem = .home) {
+    init(dataManager: NetworkRequestProtocol = NetworkRequest.shared, homeVM: HomeVM, placeHolderVM: PlaceHolderVM, selected: TabBarItem = .home) {
         print("intialize MainViewVM ...")
         
         self.dataManager = dataManager
         self.selected = selected
        
+        self.homeVM = homeVM
         self.placeHolderVM = placeHolderVM
     }
     

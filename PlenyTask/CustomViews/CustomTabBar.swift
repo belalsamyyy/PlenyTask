@@ -34,7 +34,7 @@ struct CustomTabBar: View {
 
 struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(vm: MainViewVM(placeHolderVM: PlaceHolderVM()))
+        MainView(vm: MainViewVM(homeVM: HomeVM(), placeHolderVM: PlaceHolderVM()))
     }
 }
 

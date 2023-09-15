@@ -38,6 +38,8 @@
 		41EDF7B12AB4503300399425 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B02AB4503300399425 /* MainVM.swift */; };
 		41EDF7B32AB4515400399425 /* PlaceHolderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B22AB4515400399425 /* PlaceHolderVM.swift */; };
 		41EDF7B52AB4A58700399425 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B42AB4A58700399425 /* CustomTabBar.swift */; };
+		41EDF7B72AB4AEAD00399425 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B62AB4AEAD00399425 /* HomeView.swift */; };
+		41EDF7B92AB4AEB700399425 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B82AB4AEB700399425 /* HomeVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		41EDF7B02AB4503300399425 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		41EDF7B22AB4515400399425 /* PlaceHolderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderVM.swift; sourceTree = "<group>"; };
 		41EDF7B42AB4A58700399425 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		41EDF7B62AB4AEAD00399425 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		41EDF7B82AB4AEB700399425 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 				41EDF7902AB3A05E00399425 /* SplashView.swift */,
 				41EDF79E2AB42CEE00399425 /* SignInView.swift */,
 				41EDF7AE2AB4502800399425 /* MainView.swift */,
+				41EDF7B62AB4AEAD00399425 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				41EDF79C2AB42CCD00399425 /* SignInVM.swift */,
 				41EDF7B02AB4503300399425 /* MainVM.swift */,
 				41EDF7B22AB4515400399425 /* PlaceHolderVM.swift */,
+				41EDF7B82AB4AEB700399425 /* HomeVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				41EDF7AB2AB4476B00399425 /* String+Extensions.swift in Sources */,
 				41EDF7892AB38FF300399425 /* AppDelegate.swift in Sources */,
 				41EDF7532AB37D3700399425 /* ContentView.swift in Sources */,
+				41EDF7B92AB4AEB700399425 /* HomeVM.swift in Sources */,
 				41EDF78F2AB39F9E00399425 /* NavCoordinator.swift in Sources */,
 				41EDF78D2AB3943900399425 /* AppCoordinator.swift in Sources */,
 				41EDF7AD2AB44BB700399425 /* UserDefaults.swift in Sources */,
@@ -421,6 +428,7 @@
 				41EDF78B2AB3900400399425 /* SceneDelegate.swift in Sources */,
 				41EDF7A72AB4438B00399425 /* UIApplication+hideKeyboard.swift in Sources */,
 				41EDF7912AB3A05E00399425 /* SplashView.swift in Sources */,
+				41EDF7B72AB4AEAD00399425 /* HomeView.swift in Sources */,
 				41EDF79F2AB42CEE00399425 /* SignInView.swift in Sources */,
 				41EDF7992AB3B9F200399425 /* NetworkRequest.swift in Sources */,
 				41EDF79D2AB42CCD00399425 /* SignInVM.swift in Sources */,

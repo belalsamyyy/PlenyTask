@@ -13,7 +13,7 @@ struct MainView: View {
     var body: some View {
         VStack {
             TabView(selection: $vm.selected) {
-                ContentView()
+                HomeView(vm: vm.homeVM)
                     .tag(vm.tabItems[0])
                     .ignoresSafeArea(.all)
                 
@@ -43,6 +43,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(vm: MainViewVM(placeHolderVM: PlaceHolderVM()))
+        MainView(vm: MainViewVM(homeVM: HomeVM(), placeHolderVM: PlaceHolderVM()))
     }
 }
