@@ -31,6 +31,12 @@
 		41EDF7A32AB439DA00399425 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7A22AB439D900399425 /* CustomButton.swift */; };
 		41EDF7A52AB442B700399425 /* View+adaptsToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7A42AB442B700399425 /* View+adaptsToKeyboard.swift */; };
 		41EDF7A72AB4438B00399425 /* UIApplication+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7A62AB4438B00399425 /* UIApplication+hideKeyboard.swift */; };
+		41EDF7A92AB4470D00399425 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7A82AB4470D00399425 /* Validators.swift */; };
+		41EDF7AB2AB4476B00399425 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7AA2AB4476B00399425 /* String+Extensions.swift */; };
+		41EDF7AD2AB44BB700399425 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7AC2AB44BB700399425 /* UserDefaults.swift */; };
+		41EDF7AF2AB4502800399425 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7AE2AB4502800399425 /* MainView.swift */; };
+		41EDF7B12AB4503300399425 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B02AB4503300399425 /* MainVM.swift */; };
+		41EDF7B32AB4515400399425 /* PlaceHolderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B22AB4515400399425 /* PlaceHolderVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,12 @@
 		41EDF7A22AB439D900399425 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		41EDF7A42AB442B700399425 /* View+adaptsToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+adaptsToKeyboard.swift"; sourceTree = "<group>"; };
 		41EDF7A62AB4438B00399425 /* UIApplication+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+hideKeyboard.swift"; sourceTree = "<group>"; };
+		41EDF7A82AB4470D00399425 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		41EDF7AA2AB4476B00399425 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		41EDF7AC2AB44BB700399425 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		41EDF7AE2AB4502800399425 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		41EDF7B02AB4503300399425 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		41EDF7B22AB4515400399425 /* PlaceHolderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,7 @@
 				41EDF7522AB37D3700399425 /* ContentView.swift */,
 				41EDF7902AB3A05E00399425 /* SplashView.swift */,
 				41EDF79E2AB42CEE00399425 /* SignInView.swift */,
+				41EDF7AE2AB4502800399425 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				41EDF79C2AB42CCD00399425 /* SignInVM.swift */,
+				41EDF7B02AB4503300399425 /* MainVM.swift */,
+				41EDF7B22AB4515400399425 /* PlaceHolderVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -220,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				41EDF7922AB3AF6800399425 /* Constants.swift */,
+				41EDF7A82AB4470D00399425 /* Validators.swift */,
+				41EDF7AC2AB44BB700399425 /* UserDefaults.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -229,6 +246,7 @@
 			children = (
 				41EDF7A42AB442B700399425 /* View+adaptsToKeyboard.swift */,
 				41EDF7A62AB4438B00399425 /* UIApplication+hideKeyboard.swift */,
+				41EDF7AA2AB4476B00399425 /* String+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -385,11 +403,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EDF7AB2AB4476B00399425 /* String+Extensions.swift in Sources */,
 				41EDF7892AB38FF300399425 /* AppDelegate.swift in Sources */,
 				41EDF7532AB37D3700399425 /* ContentView.swift in Sources */,
 				41EDF78F2AB39F9E00399425 /* NavCoordinator.swift in Sources */,
 				41EDF78D2AB3943900399425 /* AppCoordinator.swift in Sources */,
+				41EDF7AD2AB44BB700399425 /* UserDefaults.swift in Sources */,
 				41EDF7A32AB439DA00399425 /* CustomButton.swift in Sources */,
+				41EDF7B12AB4503300399425 /* MainVM.swift in Sources */,
+				41EDF7AF2AB4502800399425 /* MainView.swift in Sources */,
+				41EDF7A92AB4470D00399425 /* Validators.swift in Sources */,
 				41EDF7512AB37D3700399425 /* PlenyTaskApp.swift in Sources */,
 				41EDF7952AB3B8A500399425 /* User.swift in Sources */,
 				41EDF78B2AB3900400399425 /* SceneDelegate.swift in Sources */,
@@ -400,6 +423,7 @@
 				41EDF79D2AB42CCD00399425 /* SignInVM.swift in Sources */,
 				41EDF79B2AB3BAB600399425 /* NetworkError.swift in Sources */,
 				41EDF7932AB3AF6800399425 /* Constants.swift in Sources */,
+				41EDF7B32AB4515400399425 /* PlaceHolderVM.swift in Sources */,
 				41EDF7A52AB442B700399425 /* View+adaptsToKeyboard.swift in Sources */,
 				41EDF7972AB3B8BF00399425 /* Post.swift in Sources */,
 				41EDF7A12AB42F1700399425 /* CustomTextField.swift in Sources */,

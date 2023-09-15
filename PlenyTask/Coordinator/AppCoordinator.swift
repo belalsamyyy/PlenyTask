@@ -28,7 +28,7 @@ class AppCoordinator {
             switch appState {
             case .first:
                 print("appState => first")
-                self?.loadContentScreen()
+                self?.loadSignInScreen()
                 
             case .anonymous:
                 print("appState => anonymous")

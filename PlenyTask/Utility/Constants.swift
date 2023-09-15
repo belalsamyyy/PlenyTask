@@ -35,6 +35,26 @@ enum Status: Int {
     case SERVER_ERROR_500 = 500
 }
 
+//MARK: - Main Tab bar Items
+
+enum TabBarItem: String, CaseIterable {
+    case home
+    case shop
+    case discount
+    case gallery
+    case profile
+    
+    var iconImage: String {
+        switch self {
+        case .home: return "icon-tabbar-home"
+        case .shop: return "icon-tabbar-shop"
+        case .discount: return "icon-tabbar-discount"
+        case .gallery: return "icon-tabbar-gallery"
+        case .profile: return "icon-tabbar-profile"
+        }
+    }
+}
+
 //MARK: - UserDefaults Keys
 
 struct UserDefaultsKeys {
@@ -42,4 +62,3 @@ struct UserDefaultsKeys {
     static let isFirstTime = "IS_IT_FIRST_TIME"
     static let token = "TOKEN"
 }
-
