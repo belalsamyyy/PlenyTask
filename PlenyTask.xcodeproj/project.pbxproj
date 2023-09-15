@@ -41,6 +41,7 @@
 		41EDF7B72AB4AEAD00399425 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B62AB4AEAD00399425 /* HomeView.swift */; };
 		41EDF7B92AB4AEB700399425 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B82AB4AEB700399425 /* HomeVM.swift */; };
 		41EDF7BB2AB4B97400399425 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7BA2AB4B97400399425 /* CustomNavBar.swift */; };
+		41EDF7BD2AB4EEED00399425 /* CustomPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7BC2AB4EEED00399425 /* CustomPostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		41EDF7B62AB4AEAD00399425 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		41EDF7B82AB4AEB700399425 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		41EDF7BA2AB4B97400399425 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		41EDF7BC2AB4EEED00399425 /* CustomPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				41EDF7A22AB439D900399425 /* CustomButton.swift */,
 				41EDF7B42AB4A58700399425 /* CustomTabBar.swift */,
 				41EDF7BA2AB4B97400399425 /* CustomNavBar.swift */,
+				41EDF7BC2AB4EEED00399425 /* CustomPostCell.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				41EDF79B2AB3BAB600399425 /* NetworkError.swift in Sources */,
 				41EDF7932AB3AF6800399425 /* Constants.swift in Sources */,
 				41EDF7B32AB4515400399425 /* PlaceHolderVM.swift in Sources */,
+				41EDF7BD2AB4EEED00399425 /* CustomPostCell.swift in Sources */,
 				41EDF7B52AB4A58700399425 /* CustomTabBar.swift in Sources */,
 				41EDF7A52AB442B700399425 /* View+adaptsToKeyboard.swift in Sources */,
 				41EDF7972AB3B8BF00399425 /* Post.swift in Sources */,
