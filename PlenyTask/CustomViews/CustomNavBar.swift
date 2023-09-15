@@ -10,12 +10,13 @@ import SwiftUI
 
 struct CustomNavBar: View {
     @State private var isSearching: Bool = false
-    
+    @Binding var searchText: String
+
     var body: some View {
         HStack(alignment: .center) {
             
             if isSearching {
-                CustomTextField(icon: "icon-home-search", value: .constant(""), placeholder: "Search ...", actionType: .cancel(action: {
+                CustomTextField(icon: "icon-home-search", value: $searchText, placeholder: "Search ...", actionType: .cancel(action: {
                     print("cancel btn tapped ...")
                     isSearching.toggle()
                 }))
@@ -51,6 +52,6 @@ struct CustomNavBar: View {
 
 struct CustomNavBar_Previews: PreviewProvider {
     static var previews: some View {
-        CustomNavBar()
+        CustomNavBar(searchText: .constant(""))
     }
 }

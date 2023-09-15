@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInView: View {
     @ObservedObject var vm: SignInVM
     
-    // i add default values, for quicker testing
+    // Add auth default values, for quicker testing
     @State private var username = "kminchelle"
     @State private var password = "0lelplR"
     

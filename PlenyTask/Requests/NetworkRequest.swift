@@ -14,7 +14,7 @@ import Alamofire
 
 protocol NetworkRequestProtocol {
     func login(username: String, password: String) -> AnyPublisher<DataResponse<User, NetworkError> ,Never> // Login
-    func getPostsList() -> AnyPublisher<DataResponse<Posts, NetworkError> ,Never> // posts list
+    func getPostsList(limit: Int, skip: Int) -> AnyPublisher<DataResponse<Posts, NetworkError> ,Never> // posts list
     func getPostDetails(id: Int) -> AnyPublisher<DataResponse<Post, NetworkError> ,Never> // post details ( with ID )
     func searchPosts(query: String) -> AnyPublisher<DataResponse<Posts, NetworkError> ,Never> // search
 }
@@ -59,8 +59,8 @@ extension NetworkRequest: NetworkRequestProtocol {
     
     //MARK: - Posts
     
-    func getPostsList() -> AnyPublisher<Alamofire.DataResponse<Posts, NetworkError>, Never> {
-        let url = URL(string: "\(BASE_URL)\(API.GetPosts.url)")! // I'm sure it's not Nil
+    func getPostsList(limit: Int, skip: Int) -> AnyPublisher<Alamofire.DataResponse<Posts, NetworkError>, Never> {
+        let url = URL(string: "\(BASE_URL)\(API.GetPosts(limit: limit, skip: skip).url)")! // I'm sure it's not Nil
         let headers: HTTPHeaders = ["Accept-Content-Type": "application/json"]
         
         print("Token => ...")
