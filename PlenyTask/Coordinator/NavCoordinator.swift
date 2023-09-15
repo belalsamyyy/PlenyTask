@@ -20,8 +20,9 @@ extension AppCoordinator {
     func loadContentScreen() {
         loadSplashScreen()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
-            self?.present(ContentView())
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: { [weak self] in
+            let vm = SignInVM()
+            self?.present(SignInView(vm: vm))
         })
     }
 

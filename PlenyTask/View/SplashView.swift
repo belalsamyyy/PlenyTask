@@ -16,7 +16,7 @@ struct SplashView: View {
             
             VStack(alignment: .center, spacing: 0) {
                 
-                Image("logo-pleny")
+                Image("image-pleny-logo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 300, alignment: .center)
