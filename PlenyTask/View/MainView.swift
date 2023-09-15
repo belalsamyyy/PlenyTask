@@ -15,23 +15,18 @@ struct MainView: View {
             TabView(selection: $vm.selected) {
                 HomeView(vm: vm.homeVM)
                     .tag(vm.tabItems[0])
-                    .ignoresSafeArea(.all)
                 
                 ContentView()
                     .tag(vm.tabItems[1])
-                    .ignoresSafeArea(.all)
                 
                 ContentView()
                     .tag(vm.tabItems[2])
-                    .ignoresSafeArea(.all)
                 
                 ContentView()
                     .tag(vm.tabItems[3])
-                    .ignoresSafeArea(.all)
                 
                 ContentView()
                     .tag(vm.tabItems[4])
-                    .ignoresSafeArea(.all)
             }
             
             Spacer()

@@ -9,8 +9,18 @@ import SwiftUI
 
 //MARK: - TextField Action Enum
 
-enum TextFiledButtonType {
+enum TextFiledButtonType: Equatable {
     case password
+    case cancel(action: () -> Void)
+    
+    static func == (lhs: TextFiledButtonType, rhs: TextFiledButtonType) -> Bool {
+        switch (lhs, rhs) {
+        case (.password, .password):
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 //MARK: - Text Field
@@ -18,6 +28,9 @@ enum TextFiledButtonType {
 struct CustomTextField: View {
     // optional - title ( text view )
     var title: String? = nil
+    
+    // logo
+    var icon: String? = nil
     
     // text field properties
     var type: UIKeyboardType = .default
@@ -45,6 +58,14 @@ struct CustomTextField: View {
             //MARK: - TextField itself
             
             HStack {
+                
+                if icon != nil {
+                    Image(icon!)
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .padding(.leading, 10)
+                }
+                
                 if actionType == .password {
                     if !isTextHidden {
                         SecureField(placeholder, text: $value)
@@ -90,6 +111,19 @@ struct CustomTextField: View {
                     .padding(.leading, 10)
                     .frame(width: 25, height: 15)
                     
+                case .cancel(let action):
+                    Button {
+                        action()
+                    } label: {
+                        Image("icon-searchbar-cancel")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .padding(.trailing, 30)
+                    }
+                    .padding(.leading, 10)
+                    .frame(width: 25, height: 15)
+                    
+                    
                 default:
                     EmptyView()
                 }
@@ -109,5 +143,6 @@ struct CustomTextField_Previews: PreviewProvider {
     static var previews: some View {
         CustomTextField(title: "User Name", type: .emailAddress, value: .constant(""), placeholder: "Enter your user name")
         CustomTextField(title: "Password", type: .numberPad, value: .constant(""), placeholder: "Enter your password", actionType: .password)
+        CustomTextField(icon: "icon-home-search", value: .constant(""), placeholder: "Search ...", actionType: .cancel(action: { print("cancel btn tapped ...") }))
     }
 }

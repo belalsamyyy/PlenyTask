@@ -11,22 +11,26 @@ struct HomeView: View {
     @ObservedObject var vm: HomeVM
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 5) {
-                ForEach(vm.posts, id: \.id) { post in
-                    VStack(alignment: .center, spacing: 20) {
-                        Divider()
-                        Text(post.body)
-                            .font(.system(size: 18))
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(3)
-                            .frame(maxHeight: .infinity)
-                            .padding(.bottom)
+        VStack {
+            CustomNavBar()
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 5) {
+                    ForEach(vm.posts, id: \.id) { post in
+                        VStack(alignment: .center, spacing: 20) {
+                            Divider()
+                            Text(post.body)
+                                .font(.system(size: 18))
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(3)
+                                .frame(maxHeight: .infinity)
+                                .padding(.bottom)
+                        }
                     }
                 }
+                .padding(.horizontal)
+                
             }
-            .padding(.horizontal)
-            
         }
     }
 }
