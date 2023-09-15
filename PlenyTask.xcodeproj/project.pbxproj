@@ -37,6 +37,7 @@
 		41EDF7AF2AB4502800399425 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7AE2AB4502800399425 /* MainView.swift */; };
 		41EDF7B12AB4503300399425 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B02AB4503300399425 /* MainVM.swift */; };
 		41EDF7B32AB4515400399425 /* PlaceHolderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B22AB4515400399425 /* PlaceHolderVM.swift */; };
+		41EDF7B52AB4A58700399425 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B42AB4A58700399425 /* CustomTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		41EDF7AE2AB4502800399425 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		41EDF7B02AB4503300399425 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		41EDF7B22AB4515400399425 /* PlaceHolderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderVM.swift; sourceTree = "<group>"; };
+		41EDF7B42AB4A58700399425 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			children = (
 				41EDF7A02AB42F1700399425 /* CustomTextField.swift */,
 				41EDF7A22AB439D900399425 /* CustomButton.swift */,
+				41EDF7B42AB4A58700399425 /* CustomTabBar.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				41EDF79B2AB3BAB600399425 /* NetworkError.swift in Sources */,
 				41EDF7932AB3AF6800399425 /* Constants.swift in Sources */,
 				41EDF7B32AB4515400399425 /* PlaceHolderVM.swift in Sources */,
+				41EDF7B52AB4A58700399425 /* CustomTabBar.swift in Sources */,
 				41EDF7A52AB442B700399425 /* View+adaptsToKeyboard.swift in Sources */,
 				41EDF7972AB3B8BF00399425 /* Post.swift in Sources */,
 				41EDF7A12AB42F1700399425 /* CustomTextField.swift in Sources */,

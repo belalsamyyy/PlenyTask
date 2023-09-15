@@ -9,9 +9,35 @@ import SwiftUI
 
 struct MainView: View {
     @ObservedObject var vm: MainViewVM
-
+    
     var body: some View {
-        Text("welcome to Main View ...")
+        VStack {
+            TabView(selection: $vm.selected) {
+                ContentView()
+                    .tag(vm.tabItems[0])
+                    .ignoresSafeArea(.all)
+                
+                ContentView()
+                    .tag(vm.tabItems[1])
+                    .ignoresSafeArea(.all)
+                
+                ContentView()
+                    .tag(vm.tabItems[2])
+                    .ignoresSafeArea(.all)
+                
+                ContentView()
+                    .tag(vm.tabItems[3])
+                    .ignoresSafeArea(.all)
+                
+                ContentView()
+                    .tag(vm.tabItems[4])
+                    .ignoresSafeArea(.all)
+            }
+            
+            Spacer()
+            
+            CustomTabBar(tabItems: vm.tabItems, selected: $vm.selected)
+        }
     }
 }
 
@@ -20,4 +46,3 @@ struct MainView_Previews: PreviewProvider {
         MainView(vm: MainViewVM(placeHolderVM: PlaceHolderVM()))
     }
 }
-
