@@ -17,4 +17,7 @@ protocol Repository {
     func searchPosts(query: String) -> AnyPublisher<DataResponse<Posts, NetworkError>, Never>
 }
 
-
+protocol LocalRepository {
+    func saveUser(_ user: User)
+    func fetchUser() -> User?
+}
