@@ -20,4 +20,6 @@ protocol Repository {
 protocol LocalRepository {
     func saveUser(_ user: User)
     func fetchUser() -> User?
+    func savePost(_ post: Post)
+    func fetchPost(byId id: Int) -> Post?
 }

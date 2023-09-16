@@ -45,4 +45,29 @@ class CoreDataRepository: LocalRepository {
         }
         return nil
     }
+    
+    func savePost(_ post: Post) {
+        let postEntity = PostEntity(context: managedObjectContext)
+        postEntity.id = Int32(post.id)
+        postEntity.title = post.title
+        postEntity.body = post.body
+        postEntity.userId = Int32(post.userId)
+        postEntity.tags = post.tags as NSObject
+        postEntity.reactions = Int32(post.reactions)
+        try? managedObjectContext.save()
+    }
+
+    func fetchPost(byId id: Int) -> Post? {
+        let fetchRequest: NSFetchRequest<PostEntity> = PostEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+        if let postEntity = try? managedObjectContext.fetch(fetchRequest).first {
+            return Post(id: Int(postEntity.id),
+                        title: postEntity.title ?? "",
+                        body: postEntity.body ?? "",
+                        userId: Int(postEntity.userId),
+                        tags: postEntity.tags as? [String] ?? [],
+                        reactions: Int(postEntity.reactions))
+        }
+        return nil
+    }
 }

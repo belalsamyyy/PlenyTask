@@ -47,8 +47,6 @@
 		41EDF7C52AB601FF00399425 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7C42AB601FF00399425 /* NetworkRepository.swift */; };
 		41EDF7D72AB60E1B00399425 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7D62AB60E1B00399425 /* CoreDataRepository.swift */; };
 		41EDF7DA2AB60E3800399425 /* Pleny.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7D82AB60E3800399425 /* Pleny.xcdatamodeld */; };
-		41EDF7DD2AB60E5100399425 /* UserEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7DB2AB60E5100399425 /* UserEntity+CoreDataClass.swift */; };
-		41EDF7DE2AB60E5200399425 /* UserEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7DC2AB60E5100399425 /* UserEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,8 +109,6 @@
 		41EDF7C42AB601FF00399425 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		41EDF7D62AB60E1B00399425 /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		41EDF7D92AB60E3800399425 /* pleny.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pleny.xcdatamodel; sourceTree = "<group>"; };
-		41EDF7DB2AB60E5100399425 /* UserEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		41EDF7DC2AB60E5100399425 /* UserEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +140,6 @@
 		41EDF7442AB37D3700399425 = {
 			isa = PBXGroup;
 			children = (
-				41EDF7DB2AB60E5100399425 /* UserEntity+CoreDataClass.swift */,
-				41EDF7DC2AB60E5100399425 /* UserEntity+CoreDataProperties.swift */,
 				41EDF74F2AB37D3700399425 /* PlenyTask */,
 				41EDF7602AB37D3A00399425 /* PlenyTaskTests */,
 				41EDF76A2AB37D3A00399425 /* PlenyTaskUITests */,
@@ -460,7 +454,6 @@
 				41EDF7AF2AB4502800399425 /* MainView.swift in Sources */,
 				41EDF7BF2AB51F5D00399425 /* Array+paginated.swift in Sources */,
 				41EDF7A92AB4470D00399425 /* Validators.swift in Sources */,
-				41EDF7DE2AB60E5200399425 /* UserEntity+CoreDataProperties.swift in Sources */,
 				41EDF7D72AB60E1B00399425 /* CoreDataRepository.swift in Sources */,
 				41EDF7512AB37D3700399425 /* PlenyTaskApp.swift in Sources */,
 				41EDF7952AB3B8A500399425 /* User.swift in Sources */,
@@ -469,7 +462,6 @@
 				41EDF7DA2AB60E3800399425 /* Pleny.xcdatamodeld in Sources */,
 				41EDF7912AB3A05E00399425 /* SplashView.swift in Sources */,
 				41EDF7B72AB4AEAD00399425 /* HomeView.swift in Sources */,
-				41EDF7DD2AB60E5100399425 /* UserEntity+CoreDataClass.swift in Sources */,
 				41EDF79F2AB42CEE00399425 /* SignInView.swift in Sources */,
 				41EDF7992AB3B9F200399425 /* NetworkRequest.swift in Sources */,
 				41EDF79D2AB42CCD00399425 /* SignInVM.swift in Sources */,
