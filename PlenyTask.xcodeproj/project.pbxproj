@@ -43,6 +43,8 @@
 		41EDF7BB2AB4B97400399425 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7BA2AB4B97400399425 /* CustomNavBar.swift */; };
 		41EDF7BD2AB4EEED00399425 /* CustomPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7BC2AB4EEED00399425 /* CustomPostCell.swift */; };
 		41EDF7BF2AB51F5D00399425 /* Array+paginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7BE2AB51F5D00399425 /* Array+paginated.swift */; };
+		41EDF7C32AB5CB7C00399425 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7C22AB5CB7C00399425 /* Repository.swift */; };
+		41EDF7C52AB601FF00399425 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7C42AB601FF00399425 /* NetworkRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		41EDF7BA2AB4B97400399425 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		41EDF7BC2AB4EEED00399425 /* CustomPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPostCell.swift; sourceTree = "<group>"; };
 		41EDF7BE2AB51F5D00399425 /* Array+paginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+paginated.swift"; sourceTree = "<group>"; };
+		41EDF7C22AB5CB7C00399425 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		41EDF7C42AB601FF00399425 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 				41EDF77F2AB38E6A00399425 /* View */,
 				41EDF7802AB38E8300399425 /* ViewModel */,
 				41EDF7812AB38E8D00399425 /* Model */,
+				41EDF7C12AB5CB1700399425 /* Repository */,
 				41EDF7872AB38EE400399425 /* Resources */,
 				41EDF7562AB37D3A00399425 /* Preview Content */,
 				41EDF7882AB38FF300399425 /* AppDelegate.swift */,
@@ -283,6 +288,15 @@
 				41EDF7542AB37D3A00399425 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		41EDF7C12AB5CB1700399425 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				41EDF7C22AB5CB7C00399425 /* Repository.swift */,
+				41EDF7C42AB601FF00399425 /* NetworkRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,9 +459,11 @@
 				41EDF79D2AB42CCD00399425 /* SignInVM.swift in Sources */,
 				41EDF79B2AB3BAB600399425 /* NetworkError.swift in Sources */,
 				41EDF7932AB3AF6800399425 /* Constants.swift in Sources */,
+				41EDF7C32AB5CB7C00399425 /* Repository.swift in Sources */,
 				41EDF7B32AB4515400399425 /* PlaceHolderVM.swift in Sources */,
 				41EDF7BD2AB4EEED00399425 /* CustomPostCell.swift in Sources */,
 				41EDF7B52AB4A58700399425 /* CustomTabBar.swift in Sources */,
+				41EDF7C52AB601FF00399425 /* NetworkRepository.swift in Sources */,
 				41EDF7A52AB442B700399425 /* View+adaptsToKeyboard.swift in Sources */,
 				41EDF7972AB3B8BF00399425 /* Post.swift in Sources */,
 				41EDF7A12AB42F1700399425 /* CustomTextField.swift in Sources */,

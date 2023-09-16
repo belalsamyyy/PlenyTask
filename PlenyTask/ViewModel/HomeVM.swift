@@ -12,7 +12,7 @@ import Alamofire
 
 class HomeVM: ObservableObject {
     
-    var dataManager: NetworkRequestProtocol
+    var repository: Repository
     var subscriptions: [AnyCancellable] = []
     
     // infinite scroll pagination
@@ -25,8 +25,8 @@ class HomeVM: ObservableObject {
     @Published var posts: [Post] = []
     
     //MARK: Init
-    init(dataManager: NetworkRequestProtocol = NetworkRequest.shared) {
-        self.dataManager = dataManager
+    init(repository: Repository = NetworkRepository(networkService: NetworkRequest.shared)) {
+        self.repository = repository
         print("intialize HomeVM ...")
         getPosts()
     }
@@ -46,9 +46,9 @@ class HomeVM: ObservableObject {
         let fetchDataPublisher: AnyPublisher<DataResponse<Posts, NetworkError>, Never>
         
         if isSearching {
-            fetchDataPublisher = dataManager.searchPosts(query: searchQuery)
+            fetchDataPublisher = repository.searchPosts(query: searchQuery)
         } else {
-            fetchDataPublisher = dataManager.getPostsList(limit: limit, skip: skip)
+            fetchDataPublisher = repository.getPostsList(limit: limit, skip: skip)
         }
         
         fetchDataPublisher.sink { [weak self] response in

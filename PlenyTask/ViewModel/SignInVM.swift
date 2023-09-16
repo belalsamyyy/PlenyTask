@@ -12,12 +12,12 @@ import SwiftUI
 class SignInVM: ObservableObject {
     var openMainScreen = PassthroughSubject<TabBarItem, Never>()
 
-    var dataManager: NetworkRequestProtocol
+    var repository: Repository
     var subscriptions: [AnyCancellable] = []
     
     //MARK: Init
-    init(dataManager: NetworkRequestProtocol = NetworkRequest.shared) {
-        self.dataManager = dataManager
+    init(repository: Repository = NetworkRepository(networkService: NetworkRequest.shared)) {
+        self.repository = repository
         print("intialize SignInVM ...")
     }
     
@@ -45,7 +45,7 @@ class SignInVM: ObservableObject {
     }
     
     private func loginAction(username: String, password: String) {
-        dataManager.login(username: username, password: password).sink { [weak self] response in
+        repository.login(username: username, password: password).sink { [weak self] response in
             if let response = response.value {
                 // SUCCESS
                 print("You logged in successfully, \(response.firstName) 👋")
