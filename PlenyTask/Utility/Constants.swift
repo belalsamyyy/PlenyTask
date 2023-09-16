@@ -27,6 +27,7 @@ enum API {
     }
 }
 
+
 //MARK: - Responses Status
 
 enum Status: Int {

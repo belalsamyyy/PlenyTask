@@ -16,16 +16,16 @@ struct MainView: View {
                 HomeView(vm: vm.homeVM)
                     .tag(vm.tabItems[0])
                 
-                ContentView()
+                ContentView(view: "shop")
                     .tag(vm.tabItems[1])
                 
-                ContentView()
+                ContentView(view: "discount")
                     .tag(vm.tabItems[2])
                 
-                ContentView()
+                ContentView(view: "gallery")
                     .tag(vm.tabItems[3])
                 
-                ContentView()
+                ContentView(view: "profile")
                     .tag(vm.tabItems[4])
             }
             

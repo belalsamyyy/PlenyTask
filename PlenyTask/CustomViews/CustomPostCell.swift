@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomPostCell: View {
     @State var username: String
     @State var userimage: String
+    @State var date: String
     @State var content: String
     @State var images: [String]
     
@@ -26,7 +27,7 @@ struct CustomPostCell: View {
                     Text(username)
                         .font(.system(size: 18))
                     
-                    Text("\(Int.random(in: 1...30)) days ago")
+                    Text(date)
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
                 }
@@ -131,20 +132,20 @@ struct CustomPostCell: View {
                     VStack(spacing: 3) {
                         Image(images[2])
                             .resizable()
-                        Image(images[3])
-                            .resizable()
-                            .overlay {
-                                ZStack(alignment: .center) {
-                                    RoundedRectangle(cornerRadius: 5)
-                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                        .foregroundColor(.black)
-                                        .opacity(0.60)
-                                
-                                    Text("+ \(images.count - 4)")
-                                        .font(.system(size: 20, weight: .bold))
-                                        .foregroundColor(.white)
-                                }
-                            }
+                        
+                        ZStack(alignment: .center) {
+                            Image(images[3])
+                                .resizable()
+                            
+                            RoundedRectangle(cornerRadius: 5)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .foregroundColor(.black)
+                                .opacity(0.60)
+                            
+                            Text("+\(images.count - 4)")
+                                .font(.system(size: 25, weight: .bold))
+                                .foregroundColor(.white)
+                        }
                     }
                     
                 }
@@ -164,7 +165,7 @@ struct CustomPostCell: View {
 
 struct CustomPostCell_Previews: PreviewProvider {
     static var previews: some View {
-        CustomPostCell(username: "Neama Ahmed", userimage: "image-post-meal1", content: "Craving something delicious? Try our new dish - a savory mix of roasted vegetables and quinoa, topped with a zesty garlic. Yum!", images: [])
+        CustomPostCell(username: "Neama Ahmed", userimage: "image-post-meal1", date: "2 days ago", content: "Craving something delicious? Try our new dish - a savory mix of roasted vegetables and quinoa, topped with a zesty garlic. Yum!", images: [])
         HomeView(vm: HomeVM())
     }
 }

@@ -113,6 +113,7 @@ struct CustomTextField: View {
                     
                 case .cancel(let action):
                     Button {
+                        value = ""
                         action()
                     } label: {
                         Image("icon-searchbar-cancel")

@@ -39,8 +39,8 @@ extension NetworkRequest: NetworkRequestProtocol {
         let param: Parameters = ["username": username , "password": password]
         
         // feedback for request inputs
-        print("URL => \(url)")
-        print("Params => \(param)")
+        //print("URL => \(url)")
+        //print("Params => \(param)")
         
         return AF.request(url, method: .post, parameters: param ,encoding: JSONEncoding.default, headers: headers)
             .validate()
@@ -63,8 +63,8 @@ extension NetworkRequest: NetworkRequestProtocol {
         let url = URL(string: "\(BASE_URL)\(API.GetPosts(limit: limit, skip: skip).url)")! // I'm sure it's not Nil
         let headers: HTTPHeaders = ["Accept-Content-Type": "application/json"]
         
-        print("Token => ...")
-        print("URL => \(url)")
+        //print("Token => \(Defaults.token)")
+        //print("URL => \(url)")
         
         return AF.request(url, method: .get, parameters: nil ,encoding: JSONEncoding.default, headers: headers)
             .validate()
@@ -85,8 +85,8 @@ extension NetworkRequest: NetworkRequestProtocol {
         let url = URL(string: "\(BASE_URL)\(API.GetPost(id: id).url)")! // I'm sure it's not Nil
         let headers: HTTPHeaders = ["Accept-Content-Type": "application/json"]
         
-        print("Token => ...")
-        print("URL => \(url)")
+        //print("Token => \(Defaults.token)")
+        //print("URL => \(url)")
         
         return AF.request(url, method: .get, parameters: nil ,encoding: JSONEncoding.default, headers: headers)
             .validate()
@@ -110,8 +110,8 @@ extension NetworkRequest: NetworkRequestProtocol {
         let url = URL(string: "\(BASE_URL)\(API.GetPostsSearch(query: query).url)")! // I'm sure it's not Nil
         let headers: HTTPHeaders = ["Accept-Content-Type": "application/json"]
         
-        print("Token => ...")
-        print("URL => \(url)")
+        //print("Token => \(Defaults.token)")
+        //print("URL => \(url)")
         
         return AF.request(url, method: .get, parameters: nil ,encoding: JSONEncoding.default, headers: headers)
             .validate()

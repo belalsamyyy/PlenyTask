@@ -42,6 +42,7 @@
 		41EDF7B92AB4AEB700399425 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7B82AB4AEB700399425 /* HomeVM.swift */; };
 		41EDF7BB2AB4B97400399425 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7BA2AB4B97400399425 /* CustomNavBar.swift */; };
 		41EDF7BD2AB4EEED00399425 /* CustomPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7BC2AB4EEED00399425 /* CustomPostCell.swift */; };
+		41EDF7BF2AB51F5D00399425 /* Array+paginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF7BE2AB51F5D00399425 /* Array+paginated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		41EDF7B82AB4AEB700399425 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		41EDF7BA2AB4B97400399425 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		41EDF7BC2AB4EEED00399425 /* CustomPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPostCell.swift; sourceTree = "<group>"; };
+		41EDF7BE2AB51F5D00399425 /* Array+paginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+paginated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +161,6 @@
 				41EDF7802AB38E8300399425 /* ViewModel */,
 				41EDF7812AB38E8D00399425 /* Model */,
 				41EDF7872AB38EE400399425 /* Resources */,
-				41EDF7542AB37D3A00399425 /* Assets.xcassets */,
 				41EDF7562AB37D3A00399425 /* Preview Content */,
 				41EDF7882AB38FF300399425 /* AppDelegate.swift */,
 				41EDF78A2AB3900400399425 /* SceneDelegate.swift */,
@@ -196,11 +197,11 @@
 		41EDF77F2AB38E6A00399425 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				41EDF7522AB37D3700399425 /* ContentView.swift */,
 				41EDF7902AB3A05E00399425 /* SplashView.swift */,
 				41EDF79E2AB42CEE00399425 /* SignInView.swift */,
 				41EDF7AE2AB4502800399425 /* MainView.swift */,
 				41EDF7B62AB4AEAD00399425 /* HomeView.swift */,
+				41EDF7522AB37D3700399425 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +260,7 @@
 				41EDF7A42AB442B700399425 /* View+adaptsToKeyboard.swift */,
 				41EDF7A62AB4438B00399425 /* UIApplication+hideKeyboard.swift */,
 				41EDF7AA2AB4476B00399425 /* String+Extensions.swift */,
+				41EDF7BE2AB51F5D00399425 /* Array+paginated.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -278,6 +280,7 @@
 		41EDF7872AB38EE400399425 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				41EDF7542AB37D3A00399425 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				41EDF7A32AB439DA00399425 /* CustomButton.swift in Sources */,
 				41EDF7B12AB4503300399425 /* MainVM.swift in Sources */,
 				41EDF7AF2AB4502800399425 /* MainView.swift in Sources */,
+				41EDF7BF2AB51F5D00399425 /* Array+paginated.swift in Sources */,
 				41EDF7A92AB4470D00399425 /* Validators.swift in Sources */,
 				41EDF7512AB37D3700399425 /* PlenyTaskApp.swift in Sources */,
 				41EDF7952AB3B8A500399425 /* User.swift in Sources */,

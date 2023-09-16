@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import Alamofire
 
 class HomeVM: ObservableObject {
     
@@ -16,8 +17,11 @@ class HomeVM: ObservableObject {
     
     // infinite scroll pagination
     private let itemsPerPage = 10
-    private var currentPage = 1
+    @Published var currentPage = 1
     @Published var isLoading = false
+    
+    @Published var isSearching = false
+    @Published var searchQuery = ""
     @Published var posts: [Post] = []
     
     //MARK: Init
@@ -39,19 +43,39 @@ class HomeVM: ObservableObject {
         let limit = itemsPerPage
         let skip = (currentPage - 1) * itemsPerPage
         
-        dataManager.getPostsList(limit: limit, skip: skip).sink { [weak self] response in
+        let fetchDataPublisher: AnyPublisher<DataResponse<Posts, NetworkError>, Never>
+        
+        if isSearching {
+            fetchDataPublisher = dataManager.searchPosts(query: searchQuery)
+        } else {
+            fetchDataPublisher = dataManager.getPostsList(limit: limit, skip: skip)
+        }
+        
+        fetchDataPublisher.sink { [weak self] response in
             if let response = response.value {
                 // SUCCESS
-                print("fetched posts successfully !!")
-                //print("response => \(response)")
-                print("load page \(self?.currentPage ?? 0) => new: \(response.posts.count) posts | total: \(self?.posts.count ?? 0)")
                 
-                self?.posts.append(contentsOf: response.posts)
-                self?.currentPage += 1
+                if self?.isSearching ?? false {
+                    // search request
+                    let paginatedPosts = response.posts.paginated(limit: limit, skip: skip) // do it manually !!
+                    print("(search request ) load page \(self?.currentPage ?? 0) => query: \(self?.searchQuery ?? "") | new: \(paginatedPosts.count) posts | total: \((self?.posts.count ?? 0) + paginatedPosts.count)")
+                    self?.posts.append(contentsOf: paginatedPosts)
+                    self?.currentPage += 1
+                    
+                    
+                } else {
+                    // fetch request
+                    print("(fetch request ) load page \(self?.currentPage ?? 0) => new: \(response.posts.count) posts | total: \((self?.posts.count ?? 0) + response.posts.count)")
+                    self?.posts.append(contentsOf: response.posts)
+                    self?.currentPage += 1
+                    
+                }
+                
                 self?.isLoading = false
             }
         }.store(in: &subscriptions)
     }
+    
     
     //MARK: - Pagination
     
@@ -61,7 +85,11 @@ class HomeVM: ObservableObject {
             getPosts()
         }
     }
-
+    
+    func resetAndRefreshPostsList() {
+        self.posts = []
+        self.currentPage = 1
+        self.getPosts()
+    }
     
 }
-

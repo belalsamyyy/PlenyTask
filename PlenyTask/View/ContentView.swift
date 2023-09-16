@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    var view: String
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Hello, from \(view) view 👋!")
         }
         .padding()
     }
@@ -21,6 +20,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(view: "Content")
     }
 }
